@@ -9,7 +9,7 @@ asdfasdfd
 
 ''' Usar para escrever suas notas '''
 
-# Permite escrever um comentário
+# Permite escrever um comentario
 print(123)  # Na frente
 # Abaixo
 print(456)
