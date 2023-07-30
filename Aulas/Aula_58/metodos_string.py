@@ -14,4 +14,5 @@ print(string.capitalize())
 number = '10'
 
 print(number.zfill(15))
+#Quantidade de numero que vao aparecer no caso vao aparecer 13 0 antes e depois o numero da variavel que e 10.
 
