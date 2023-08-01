@@ -7,8 +7,6 @@ print(nome)
 
 #--------////------------////-----------////-----------////
 
-
-
 # O metodo .startswith ele serve para detectar se a variavel comeca com a letra determinada
 nome = nome.lower().startswith('s')
 
