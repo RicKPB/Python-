@@ -2,7 +2,7 @@
 Calculadora com while
 
 Na aula foi passado que seria melhor ser feito tudo numa linha sobre a variavel sair pois, nela estamos dando uma variavel do tipo str so que quando usado o metodo 
-.startswith ele converte ela para um bool e 
+.startswith ele converte ela para um bool. (Part. Finalizar)
 '''
 
 
