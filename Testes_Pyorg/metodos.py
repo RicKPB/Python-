@@ -27,3 +27,17 @@ frase = 'O Python é uma linguagem de programação '\
     'Python foi criado por Guido van Rossum. '
     
 print(frase.count('Python'))
+
+
+# O metodo .append serve para voce adicionar um numero no final de uma lista
+
+list = [10,20,30,40]
+
+list.append(50)
+print(list)
+
+# O metodo .pop serve para elminiar o ultimo elemento da lista
+list = [10,20,30]
+list.append(50)
+list.pop()
+list.pop(2) #remover sobre o indice
