@@ -25,6 +25,8 @@ while True:
         else:
             palavra_formatada += '*'
     
+    print('Palvra formatada: ',palavra_formada)
+    
     if palavra_formatada == palavra_secreta:
         os.system('clear')
         
