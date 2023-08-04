@@ -21,7 +21,7 @@ Melhor trabalhar no final da lista
 
 #---------/--------/--------/--------/--------/
 #                     DEL
-list = [1, 2, 3, 4]
+list = [1, 2, 3, 4 ,5]
 print(list)
 list[1] = 100
 print(list[1])
