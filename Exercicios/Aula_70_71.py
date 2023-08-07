@@ -16,6 +16,7 @@ quantidade_apareceu_mais_vezes = 0
 while i < len(frase):
     letra_atual = frase[i]
     qtd_apareceu_mais_vezes_atual = frase.count(letra_atual)
+    print(qtd_apareceu_mais_vezes_atual)
     
     if letra_atual == ' ':
         i += 1
