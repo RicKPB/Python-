@@ -11,7 +11,7 @@ while True:
     letra_digitada = input('Digite uma letra: ')
     tentativas += 1
     
-    if len(letra_digitada) > 1:
+    if len(letra_digitada) < 1:
         print('Digite somente uma palavra')
         continue
     
@@ -25,7 +25,7 @@ while True:
         else:
             palavra_formatada += '*'
     
-    print('Palvra formatada: ',palavra_formada)
+    print('Palvra formatada: ',palavra_formatada)
     
     if palavra_formatada == palavra_secreta:
         os.system('clear')
