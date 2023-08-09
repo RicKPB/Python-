@@ -9,10 +9,5 @@
     "workbench.iconTheme": "material-icon-theme",
     "code-runner.executorMap": {
       "python": "clear ; python -u"},
-
-    "python.analysis.typeCheckingMode": "off",
-    "python.testing.pytestArgs": [
-        "Aulas"
-    ]
   }
   
