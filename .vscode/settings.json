@@ -1,8 +1,18 @@
 {
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
+    "editor.fontSize": 10,
+    "terminal.integrated.fontSize": 10,
+    "editor.rulers": [],
+    "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+    "workbench.iconTheme": "material-icon-theme",
+    "code-runner.executorMap": {
+      "python": "clear ; python -u"},
+
     "python.analysis.typeCheckingMode": "off",
     "python.testing.pytestArgs": [
         "Aulas"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
-}
+    ]
+  }
+  
