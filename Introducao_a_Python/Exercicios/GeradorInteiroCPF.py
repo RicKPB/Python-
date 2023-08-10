@@ -52,10 +52,17 @@ O segundo dígito do CPF é 0
 
 #Neste exemplo do execicio final sobre a secao Introducao a Python, mostra um gerador para conferir se o cpf que o usuario passar é valido ou não.
 
+import random   
+#----------//--------------------//------------------//---------------//
+#              GERADOR DOS NOVE DIGITOS
+
+nove_digitos = ''
+
+for i in range(9):
+    nove_digitos += str(random.randint(0,9))
+print(nove_digitos)
 #----------//--------------------//------------------//---------------//
 #              PRIMEIRO DIGITO CPF
-CPF = '74682489070'
-nove_digitos = CPF[:9]
 
 indice_multiplicacao_1 = 10
 lista_valores = []
@@ -78,22 +85,28 @@ print(f'O primeiro digito do cpf ė: {digito_1}')
 
 dez_digito = nove_digitos + str(digito_1)
 indice_multiplicacao_2 = 11
+lista_valores_dois = []
+
+for digito in dez_digito:
+    valor_cpf = int(digito) * indice_multiplicacao_2
+    indice_multiplicacao_2 -= 1
+    lista_valores_dois.append(valor_cpf)
 
 soma_segundo_digito = 0
-for digito in dez_digito:
-    soma_segundo_digito += int(digito) * indice_multiplicacao_2
-    indice_multiplicacao_2 -= 1
+for digito_soma in lista_valores_dois:
+    soma_segundo_digito += digito_soma
 
-digito_2 = (soma_segundo_digito * 11) % 11
+digito_2 = ((soma_segundo_digito * 10) % 11)
 digito_2 = digito_2 if digito_2 <= 9 else 0
 
 print(f'O segundo digito do cpf é: {digito_2}')
 
+#----------//--------------------//------------------//---------------//
+#              CPF finalizado
+
 cpf_gerado_sistema = (f'{nove_digitos}{digito_1}{digito_2}')
-if CPF == cpf_gerado_sistema:
-    print(f'{cpf_gerado_sistema} é um CPF valido.')
-else:
-    print('CPF invalido')
+
+print(f'{cpf_gerado_sistema}')
     
 
 
