@@ -41,7 +41,7 @@ x = 1
 
 def fuction():
     global x
-    #Neste caso estamos manipulando o valor de x global ou seja depois de ser executada a function o valor do escopo global nao sera mais de 1 e sim sera o valor 10 pois estamos manipulando o valor dela.
+    #Neste caso estamos manipulando o valor de x global ou seja depois de ser executada a function o valor do X no escopo global nao sera mais de 1 e sim sera o valor 10 pois estamos manipulando o valor dela.
     x = 10
     #Percebemos que aqui foi definido o valor de x no escopo interno da function aonde quando for executado a fuction o valor de x sera 10.
     def outraFunction():
