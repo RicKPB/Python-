@@ -17,3 +17,6 @@ boa_tarde = criar_saudacao('Boa tarde')
 print(boa_tarde(nome_saudacao))
 boa_noite = criar_saudacao('Boa noite')
 print(boa_noite(nome_saudacao))
+
+#---------------------------------------------------
+print
