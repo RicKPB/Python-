@@ -22,6 +22,12 @@
         ]
     }
     print(pessoa, type(pessoa))
+
+    ! Se criarmos chaves com o mesmo nome 
+    a quantidade de chaves sera sempre 1 pois, 
+    os nomes das chaves sendo iguais funcionam 
+    como uma atualizacao da chave aonde recebe 
+    o ultimo valor.
 """
 
 #----------------------///-----------------------
