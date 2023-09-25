@@ -7,14 +7,18 @@ def coercaoHoras(*agrs):
         hora = int(input('Digite a hora: '))
         minutos = int(input('Digite os minutos: '))
         
-        if hora >= 13:
-            horario_A_M = hora - 12
+        if hora < 24 and minutos < 60:
+            if hora >= 13:
+                horario_A_M = hora - 12
 
-            print(f'{horario_A_M}:{minutos}')
+                print(f'{horario_A_M}:{minutos}')
+        
+            else:
+                print(f'{hora}:{minutos}')
         
         else:
-            print(f'{hora}:{minutos}')
-
+            print('O horario digitado nao e real tente novamente')
+            continue
         #---------------SAIR SISTEMA------------------
         sair = input('Deseja [S]air: ').upper().startswith('S')
 
