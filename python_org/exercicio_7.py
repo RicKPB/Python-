@@ -8,8 +8,7 @@ def valorPagamento(*args):
 
         valor_a_ser_pago = float(input('Digite o valor da conta: '))
         dias_atraso = int(input('Digita quantos dias de atraso: '))
-        # valores_pagos = int([])
-
+        
         if dias_atraso > 0 :
 
             multa_um = (valor_a_ser_pago * 0.30)
@@ -22,12 +21,10 @@ def valorPagamento(*args):
             valor_pago = valor_a_ser_pago
             print(valor_pago)
             
-        # valores_pagos.append(valor_com_multa)
-        # valores_pagos.append(valor_pago)
+     
         saida = input('Deseja [S]air: ').upper().startswith('S')
 
         if saida is True:
-            # print(valores_pagos)
             break
 
 valorPagamento()
