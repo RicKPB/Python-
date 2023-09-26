@@ -18,9 +18,26 @@ def gamesCraps(*args):
             print('Voce perdeu!!')
             break
 
-        elif dado >= 4 and dado <= 10: 
-            print('Voce tirou o ponto, gire novamente.')
-        
-        
+        elif dado >= 4 and dado < 7 and dado >= 8 and dado <=10:
+            while True:
+                ponto = dado 
+                print('Voce tirou o ponto, gire novamente.')
+                input('Pressione ENTER para continuar')
+                dado = randint(2,12)
+                if dado == ponto:
+                    print('Voce ganhou o jogo!!!')
+                    break
+
+                elif dado >= 2 and dado < 7 and dado > 7:
+                    print('Gire novamente')
+                    input('Pressione ENTER para jogar')
+                    continue
+                    
+                else:
+                    print('Voce perdeu o jogo!!')
+                    break
+            
+            break
+            
 
 gamesCraps()
