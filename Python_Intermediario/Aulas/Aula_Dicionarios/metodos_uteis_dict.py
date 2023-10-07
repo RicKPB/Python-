@@ -12,6 +12,8 @@
     update - atualiza um dicionario com outro
 """
 
+import copy
+
 pessoa = {
         'nome': 'Henrique',
         'sobrenome': 'Papeschi',
@@ -89,3 +91,58 @@ print(pessoa)
 #----------//--------//---------//----------
 print('-' * 95)
 #----------//--------//---------//----------
+#               SINAL DE ATRIBUICAO
+
+d1 = {
+    'c1': 1,
+    'c2': 2,
+}
+#No caso de valores mutaveis como dict, ele nao realiza uma copia, e sim realiza um apontamento para o d1.
+d2 = d1
+
+print(d1)
+
+#Entao no caso de fizer uma alteracao na d2 ele modifica o valor da d1 
+d2['c1'] = 1000
+
+print(d1)
+
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
+#               SHALLOW COPY
+
+d1 = {
+    'c1': 1,
+    'c2': 2,
+    'l1': [0, 1, 2]
+}
+#Na utilizacao do metodo .copy() (shallow copy), ele realiza uma copia para d2 do dict d1.
+d2 = d1.copy()
+
+#Com isso se realizarmos uma alteracao no dict d2, d1 nao sera afetada.
+d2['c1'] = 1000
+
+print(d1)
+print(d2)
+
+#Em caso de ouver valores mutaveis dentro do dict, ele vai fazer com que o dict aponte pra mesma lista na memoria
+#Entao se no caso alterarmos na b2 um indice da lista o valor sera alterado nos dois dict(d1, d2)
+
+d2['l1'][1] = 15
+
+#No caso de querer realizar uma copia profunda do dict teremos que usar o import copy, que dentro dele existe o metedo copy.deepcopy()
+
+d3 = copy.deepcopy(d1)
+
+d3['l1'][1] = 99999
+
+print('-' * 95)
+
+print(d1)
+print(d2)
+print(d3)
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
+#               SHALLOW COPY
