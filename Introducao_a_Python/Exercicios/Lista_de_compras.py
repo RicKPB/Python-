@@ -15,13 +15,13 @@ while True:
     
     
     if possibilidades_lista == 'i':
-        os.system('clear')
+        os.system('cls')
         item_lista = input('Valor: ')
         lista_compras.append(item_lista)
        
     
     elif possibilidades_lista == 'a':
-        os.system('clear')
+        os.system('cls')
         indice_str = input('Escolha o indice a apagar: ')
         
         try:
