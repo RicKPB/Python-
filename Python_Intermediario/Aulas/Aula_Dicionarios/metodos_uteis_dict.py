@@ -129,7 +129,7 @@ print(d2)
 #Em caso de ouver valores mutaveis dentro do dict, ele vai fazer com que o dict aponte pra mesma lista na memoria
 #Entao se no caso alterarmos na b2 um indice da lista o valor sera alterado nos dois dict(d1, d2)
 
-d2['l1'][1] = 15
+d2['l1'][1] = 15 
 
 #No caso de querer realizar uma copia profunda do dict teremos que usar o import copy, que dentro dele existe o metedo copy.deepcopy()
 
@@ -145,4 +145,47 @@ print(d3)
 #----------//--------//---------//----------
 print('-' * 95)
 #----------//--------//---------//----------
-#               SHALLOW COPY
+#                   GET
+
+#Diante visto nas aulas anteriores o .get() ele e usado para execoes aonde ele retorna o valor da chave se ela existir, no caso de nao existir ela retorna como None.
+
+print(pessoa.get('idade1'))
+#No caso se quisermos podemos passa um valor para ser printado na tela caso nao exista
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
+#                   POP
+
+#No caso do pop ele serve como o del, para deletar um chave e seu valor atraves da chave escolhida
+
+nome = pessoa.pop('nome')
+print(nome)
+print(pessoa)
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
+#                   POPITEM
+
+#Ja o popitem() serve para deletar o ultimo valor da chave 
+
+ultima_chave = pessoa.popitem()
+print(ultima_chave)
+print(pessoa)
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
+#                   UPDATE
+
+#O update({}) serve para fazer uma atualizacao dentro do seu dict
+
+pessoa.update({
+    #atualizando chave
+    'nome': 'Novo Nome',
+    #Criando uma nova chave
+    'Rua': 'tal, tal'
+})
+
+#Podemos passar tbm como argumentos nomeados - pessoa.update(nome='aaaa',)
+#----------//--------//---------//----------
+print('-' * 95)
+#----------//--------//---------//----------
