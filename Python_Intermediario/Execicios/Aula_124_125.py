@@ -23,10 +23,11 @@ for pergunta in perguntas:
     print()
 
     print('Opções:')
+
     opcoes = pergunta['Opções']
-    for  i, opcoes in enumerate(opcoes):
+    for  i, opcao in enumerate(opcoes):
         
-        print(f'{i})',opcoes)
+        print(f'{i})',opcao)
     print()
 
     escolha = input('Escolha uma opção: ')
