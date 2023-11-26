@@ -18,6 +18,8 @@ perguntas = [
     }
 ]
 
+acertos = 0
+
 for pergunta in perguntas:
     print('Pergunta:', pergunta['Pergunta'])
     print()
@@ -25,28 +27,32 @@ for pergunta in perguntas:
     print('Opções:')
 
     opcoes = pergunta['Opções']
-    for  i, opcao in enumerate(opcoes):
+    for i, opcao in enumerate(opcoes):
         
-        print(f'{i})',opcao)
+        print(f'{i})', opcao)
     print()
 
     escolha = input('Escolha uma opção: ')
 
     acertou = False
     escolha_int = None
-    qtd_opcoes =  len(opcoes)
+    qtd_opcoes = len(opcoes)
 
     if escolha.isdigit():
         escolha_int = int(escolha)
 
     if escolha_int is not None:
-        if escolha_int >= 0 and escolha_int < qtd_opcoes:
-            if opcoes[escolha_int] ==  pergunta['Resposta']:
+        if 0 <= escolha_int < qtd_opcoes:
+        # if escolha_int >= 0 and escolha_int < qtd_opcoes:
+            if opcoes[escolha_int] == pergunta['Resposta']:
                 acertou = True
-            
+
     if acertou:
         print('Acertou!!')
+        acertos += 1
     else: 
         print('Errou!')
-    
     print()
+
+print(f'acertou {acertos}')
+print(f'de {len(perguntas)} perguntas')
